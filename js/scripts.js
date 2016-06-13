@@ -1,9 +1,18 @@
 jQuery(function($) {
-    "use strict";
+   
+    $('body').flipLightBox({
 
-    // Custom jQuery Code Here
+        flip_mode: 0,
+        lightbox_border_width: 5,
+        lightbox_flip_speed: 1500,
+        lightbox_border_color: '#cccccc',
+        lightbox_text_style: 'font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.4; color: #333333; text-align: left;',
+        lightbox_text_anchor_link_style: 'color: #999999; font-size: 25px; font-family: Impact, Charcoal, sans-serif; float: right;',
+        lightbox_text_area_position: 'top',
+        back_image_text: '&lsaquo;&lsaquo; Prev',
+        next_and_back_image_text_style: 'font-weight: bold; color: #339900; font-size: 16px; text-decoration: none;'
 
-
+    });
 
 });
 
@@ -25,12 +34,12 @@ Modernizr.addTest('appleios', function () {
 
 Modernizr.addTest('positionfixed', function () {
     var test    = document.createElement('div'),
-        control = test.cloneNode(false),
-        fake = false,
-        root = document.body || (function () {
-            fake = true;
-            return document.documentElement.appendChild(document.createElement('body'));
-        }());
+    control = test.cloneNode(false),
+    fake = false,
+    root = document.body || (function () {
+        fake = true;
+        return document.documentElement.appendChild(document.createElement('body'));
+    }());
 
     var oldCssText = root.style.cssText;
     root.style.cssText = 'padding:0;margin:0';
@@ -52,13 +61,13 @@ Modernizr.addTest('positionfixed', function () {
      * If it's about to return true, we'll explicitly test for known iOS User Agent strings.
      * "UA Sniffing is bad practice" you say. Agreeable, but sadly this feature has made it to
      * Modernizr's list of undectables, so we're reduced to having to use this. */
-    return ret && !Modernizr.appleios;
-});
+     return ret && !Modernizr.appleios;
+ });
 
 
 // Modernizr.load loading the right scripts only if you need them
 Modernizr.load([
-    {
+{
         // Let's see if we need to load selectivizr
         test : Modernizr.borderradius,
         // Modernizr.load loads selectivizr and Respond.js for IE6-8
@@ -67,7 +76,7 @@ Modernizr.load([
         test: Modernizr.touch,
         yep:ale.template_dir + '/css/touch.css'
     }
-]);
+    ]);
 
 
 
@@ -193,7 +202,7 @@ jQuery(function($) {
              $(this).hide();
              });
              */
-            respond_form.ajaxForm({
+             respond_form.ajaxForm({
                 'beforeSubmit':function(){
                     respond_form_error.text('').hide();
                 },
@@ -236,8 +245,8 @@ jQuery(function($) {
                     respond_form_error.html(error).slideDown('fast');
                 }
             });
-        }
-        $(this).each(function(){
+         }
+         $(this).each(function(){
             var post = $(this);
             // init post galleries
             $(window).load(function(){
@@ -361,11 +370,11 @@ jQuery(function($) {
                 $(this).removeClass('placeholder');
             }
         }).blur(function() {
-                if ($(this).val() == '' || $(this).val() == $(this).attr('placeholder')) {
-                    $(this).val($(this).attr('placeholder'));
-                    $(this).addClass('placeholder');
-                }
-            });
+            if ($(this).val() == '' || $(this).val() == $(this).attr('placeholder')) {
+                $(this).val($(this).attr('placeholder'));
+                $(this).addClass('placeholder');
+            }
+        });
 
         // remove placeholders on submit
         $('[placeholder]').closest('form').submit(function() {

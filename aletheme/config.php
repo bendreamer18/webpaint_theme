@@ -32,22 +32,23 @@ function aletheme_get_options() {
 						"type" => "heading");
 
     $options[] = array( "name" => "Site Logo",
-                        "desc" => "Upload or put the site logo link (Default logo size: 133-52px)",
+                        "desc" => "Upload or put the site logo link (Max. Sizes: h:110px, w:35px)",
                         "id" => "ale_sitelogo",
                         "std" => "",
                         "type" => "upload");
 
-    $options[] = array( 'name' => "Manage Background",
-                        'desc' => "Select the background color, or upload a custom background image. Default background is the #f5f5f5 color",
-                        'id' => 'ale_background',
-                        'std' => $background_defaults,
-                        'type' => 'background');
+    $options[] = array( "name" => "Name of your company",
+                        "desc" => "Type the name which is supposed to be under navigation.",
+                        "id" => "ale_company-name",
+                        "std" => "WebPaint",
+                        "type" => "text");
 
-    $options[] = array( "name" => "Background Size Cover",
-                        "desc" => "Check if you want to select cover background size",
-                        "id" => "ale_backcover",
-                        "std" => "1",
-                        "type" => "checkbox");
+    $options[] = array( "name" => "Who We Are text",
+                        "desc" => "Short information about your company and purposes.",
+                        "id" => "ale_we-want",
+                        "std" => "digital & branding agency based in Jupiter and we would love to turn ideas into beautiful things.",
+                        "type" => "text");
+
 
     $options[] = array( "name" => "Uplaod a favicon icon",
                         "desc" => "Upload or put the link of your favicon icon",

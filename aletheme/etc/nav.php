@@ -1,6 +1,6 @@
 <?php
 
-class Aletheme_Nav_Walker extends Walker_Nav_Menu
+class Aletheme_Nav_Walker extends Walker_Nav_Menu 
 {
 
     function start_el(&$output, $item, $depth = 0, $args = Array(), $current_object_id = 0)

@@ -60,15 +60,19 @@ add_action('after_setup_theme', 'ale_after_setup_theme');
 function ale_init_navigation() {
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus(array(
-			'header_left_menu'	=> __('Header Left Menu', 'aletheme'),
-            'header_right_menu'	=> __('Header Right Menu', 'aletheme'),
-            'footer_menu'	=> __('Footer Menu', 'aletheme'),
-            'aboutpage_menu'	=> __('About Page Menu', 'aletheme'),
+												'custom-menu'	=> __('Custom menu', 'aletheme'),
             'mobile_menu'	=> __('Mobile Menu', 'aletheme'),
 		));
 	}
 }
+function custom_menu(){
+	echo '<ul>';
+	wp_list_pages('title_li=&');
+	echo '</ul>';
+}
 add_action('init', 'ale_init_navigation');
+
+
 
 
 /**

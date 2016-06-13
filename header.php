@@ -11,38 +11,11 @@
 <body <?php body_class(); ?> >
 
     <?php if(is_page_template('page-home.php') or is_blog()){ ?>
-    <!-- Page Loading Animation #ID -->
-    <div id="loading"></div>
+    
+    <?php  } ?>
 
-    <!-- Background Home FlexSlider -->
-    <div id="background-slider" <?php if(is_blog()){echo 'class="blog-slider"';}?>>
-        <ul class="slides">
-            <?php
-                if(is_page_template('page-home.php')){ $slider = ale_sliders_get_slider(ale_get_option('homeslugfull')); }
-                if(is_blog()){ $slider = ale_sliders_get_slider(ale_get_option('blogslugfull')); }
-            ?>
-            <?php if($slider):?>
-                <?php foreach ($slider['slides'] as $slide) : ?>
-                    <li style="background-image: url('<?php echo $slide['image'] ?>'); background-size: cover;">
-                        <section>
-                            <div class="section-content">
-                                <p class="category"><?php echo $slide['html']; ?></p>
-                                <h2 class="caption"><?php echo $slide['title']; ?></h2>
-                                <p class="text">
-                                    <?php echo $slide['description']; ?>
-                                </p>
-                                <em class="href"> <a href="<?php echo $slide['url']; ?>"><?php _e('Read Full Post','aletheme'); ?></a> </em>
-                            </div>
-                        </section>
-                    </li>
-                <?php endforeach; ?>
-            <?php endif;?>
-        </ul>
-    </div>
-    <?php } if(is_blog()){ ?>
 
-    <?php } ?>
-
+<?php /* ?>
     <!-- Header -->
     <nav class="main-menu">
         <div class="menu-align">
@@ -101,3 +74,44 @@
             </div>
         </div>
     </nav>
+    <?php */ ?>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top"> 
+        <div class="container" id="nav-container"> 
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                </button> 
+                <a class="navbar-brand" href="#" id="logo"> <img src="<?php echo ale_get_option('sitelogo'); ?>" alt=""> </a> 
+            </div> 
+            <div id="navbar" class="navbar-collapse collapse"> 
+                <ul class="nav navbar-nav" id="top_menu"> 
+                   <?php
+                if ( function_exists( 'wp_nav_menu' ) )
+                    wp_nav_menu( 
+                        array( 
+                        'theme_location' => 'custom-menu',
+                        'fallback_cb'=> 'custom_menu',
+                        'container' => 'ul',
+                        'menu_id' => 'nav',
+                        'menu_class' => 'nav navbar-nav') 
+                    );
+                else custom_menu();
+                ?>
+                </ul> 
+            </div><!-- /.nav-collapse —>  -->
+        </div> 
+    </nav>
+
+        <!-- We are Block -->
+    <div class="row" id="weare_row">
+        <div id="we-are-text">
+            <p>We are <span id="webpaint"> <?php echo ale_get_option('company-name'); ?> </span></p>
+            <span id="small_weare"> <?php echo ale_get_option('we-want'); ?> </span>
+        </div>
+
+        <div align="center"><button id="weare_button">See Portfolio</button></div>
+    </div>
