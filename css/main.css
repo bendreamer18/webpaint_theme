@@ -250,3 +250,7 @@ button {
 .dch {
   background-color: #dedede;
 }
+.right,
+.rss {
+  display: none;
+}

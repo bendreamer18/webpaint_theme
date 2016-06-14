@@ -93,78 +93,19 @@ function aletheme_get_options() {
                         "std" => "",
                         "type" => "text");
 
-    $options[] = array( "name" => "Typography",
-                        "type" => "heading");
 
-    $options[] = array( "name" => "Select the body Font from Google Library",
-                        "desc" => "The default Font is - Raleway",
-                        "id" => "ale_headerfont",
-                        "std" => "Raleway",
-                        "type" => "select",
-                        "options" => $headerfont);
 
-    $options[] = array( "name" => "Select the body Font (Extended) from Google Library",
-                        "desc" => "The default Font (extended) is - 600",
-                        "id" => "ale_headerfontex",
-                        "std" => "600",
-                        "type" => "text",
-                        );
+    // $options[] = array( "name" => "Typography",
+    //                     "type" => "heading");
 
-    $options[] = array( "name" => "Select the Headers Font from Google Library",
-                        "desc" => "The default Font is - Libre Baskerville",
-                        "id" => "ale_mainfont",
-                        "std" => "Libre+Baskerville",
-                        "type" => "select",
-                        "options" => $headerfont);
+    // $options[] = array( "name" => "Select the body Font from Google Library",
+    //                     "desc" => "The default Font is - Lato",
+    //                     "id" => "ale_lato_font",
+    //                     "std" => "Lato",
+    //                     "type" => "select",
+    //                     "options" => $headerfont);
 
-    $options[] = array( "name" => "Select the Headers Font (Extended) from Google Library",
-                        "desc" => "The default Font (extended) is - 400,400italic",
-                        "id" => "ale_mainfontex",
-                        "std" => "400,400italic",
-                        "type" => "text",
-                        );
 
-    $options[] = array( 'name' => "H1 Style",
-                        'desc' => "Change the h1 style",
-                        'id' => 'ale_h1sty',
-                        'std' => array('size' => '22px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
-
-    $options[] = array( 'name' => "H2 Style",
-                        'desc' => "Change the h2 style",
-                        'id' => 'ale_h2sty',
-                        'std' => array('size' => '20px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
-
-    $options[] = array( 'name' => "H3 Style",
-                        'desc' => "Change the h3 style",
-                        'id' => 'ale_h3sty',
-                        'std' => array('size' => '18px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
-
-    $options[] = array( 'name' => "H4 Style",
-                        'desc' => "Change the h4 style",
-                        'id' => 'ale_h4sty',
-                        'std' => array('size' => '16px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
-
-    $options[] = array( 'name' => "H5 Style",
-                        'desc' => "Change the h5 style",
-                        'id' => 'ale_h5sty',
-                        'std' => array('size' => '14px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
-
-    $options[] = array( 'name' => "H6 Style",
-                        'desc' => "Change the h6 style",
-                        'id' => 'ale_h6sty',
-                        'std' => array('size' => '12px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
-
-    $options[] = array( 'name' => "Body Style",
-                        'desc' => "Change the body font style",
-                        'id' => 'ale_bodystyle',
-                        'std' => array('size' => '11px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
-                        'type' => 'typography');
 
 	$options[] = array( "name" => "Social",
 						"type" => "heading");
@@ -227,6 +168,88 @@ function aletheme_get_options() {
 						"id" => "ale_og_enabled",
 						"std" => "",
 						"type" => "checkbox");
+
+
+    $options[] = array( "name" => "Gallery",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "Image #1",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic1",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #2",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic2",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #3",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic3",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #4",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic4",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #5",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic5",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #6",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic6",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #7",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic7",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #8",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic8",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #9",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic9",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #10",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic10",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #11",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic11",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Image #12",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic12",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Photo #1",
+                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "id" => "ale_pic1",
+                        "std" => "",
+                        "type" => "upload");
 
 
 	

@@ -1,7 +1,10 @@
 <?php
 $ale_background = ale_get_option('background');
-$ale_headerfont = ale_get_option('headerfont');
-$ale_mainfont = ale_get_option('mainfont');
+
+
+// $ale_lato_font = ale_get_option('lato_font');
+
+
 $ale_font = ale_get_option('bodystyle');
 $ale_h1 = ale_get_option('h1sty');
 $ale_h2 = ale_get_option('h2sty');
@@ -10,11 +13,11 @@ $ale_h4 = ale_get_option('h4sty');
 $ale_h5 = ale_get_option('h5sty');
 $ale_h6 = ale_get_option('h6sty');
 ?>
-<?php
-    if(ale_get_option('headerfontex')){ $headerfontex = ":".ale_get_option('headerfontex'); } else {$headerfontex =""; }
-    if(ale_get_option('mainfontex')){ $mainfontex = ":".ale_get_option('mainfontex'); } else {$mainfontex = "";}
-    if(ale_get_option('headerfont')){ echo "<link href='http://fonts.googleapis.com/css?family=".ale_get_option('headerfont').$headerfontex."|".ale_get_option('mainfont').$mainfontex."' rel='stylesheet' type='text/css'>"; }
-?>
+
+<!-- Our the only one Font -->
+<?php echo "<link href='https://fonts.googleapis.com/css?family=Lato:300, 900' rel='stylesheet' type='text/css'>";   ?>
+
+
 <style type='text/css'>
     body {
         <?php
@@ -77,6 +80,19 @@ $ale_h6 = ale_get_option('h6sty');
         if($ale_h6['face']){ $h6family =  str_replace ('+',' ',$ale_h6['face']); echo "font-family:".$h6family.";"; };
         ?>
     }
+
+/*
+   <?php if($ale_lato_font) { ?>
+
+            .font_lato {
+                    if($ale_lato_font){ $lato_font =  str_replace ('+',' ',$ale_lato_font); echo "font-family:".$lato_font.";"; };
+            }
+    
+    <?php }  ?>*/
+
+
+
+    
 
     /*Header Font*/
     body, .blog-center-align .blog-filter-line .search input[type=search], .blog-center-align .blog-single .right-side ul a,
