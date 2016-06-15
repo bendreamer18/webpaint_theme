@@ -1,49 +1,45 @@
-    <!-- Footer -->
-    <nav class="footer-menu <?php if($post->post_type == "gallery" and !is_single()) { echo""; } elseif(is_page_template('template-contact.php') or is_page_template('template-about.php') or is_404() or is_page_template('template-award.php') or is_page_template('page-home.php')  or is_page_template('template-press.php')){  echo ""; } else { echo "no-fixed";}    ?>">
+<div class="row" id="footer">
 
-        <!-- Social -->
-        <ul class="left">
-            <?php if(ale_get_option('fb')){ echo '<li class="facebook"><a href="'.ale_get_option('fb').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('twi')){ echo '<li class="twitter"><a href="'.ale_get_option('twi').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('gog')){ echo '<li class="google"><a href="'.ale_get_option('gog').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('pint')){ echo '<li class="pinterest"><a href="'.ale_get_option('pint').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('flickr')){ echo '<li class="flickr"><a href="'.ale_get_option('flickr').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('linked')){ echo '<li class="linkedin"><a href="'.ale_get_option('linked').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('insta')){ echo '<li class="instagram"><a href="'.ale_get_option('insta').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('emailcont')){ echo '<li class="mail"><a href="mailto:'.ale_get_option('emailcont').'" rel="external"></a></li>'; } ?>
-            <?php if(ale_get_option('rssicon')){?><li class="rss"><a href="<?php echo home_url(); ?>/feed" rel="external"></a></li><?php } ?>
-        </ul>
+<span id="getintouch"> <?php echo ale_get_option('footer_head'); ?> </span> <br>
+<span id="undertouch"> <?php echo ale_get_option('footer_text'); ?> </span> <br> <br>
 
-        <?php if(is_page_template('page-home.php')){ ?>
-        <!-- Footer Menu -->
-        <div class="center">
-            <ul class="nav">
-                <li><span><?php echo ale_get_option('footermenutitle'); ?></span>
-                    <?php
-                    if ( has_nav_menu( 'footer_menu' ) ) {
-                        wp_nav_menu(array(
-                            'theme_location'=> 'footer_menu',
-                            'menu'			=> 'Footer Menu',
-                            'menu_class'	=> 'footermenu cf',
-                            'walker'		=> new Aletheme_Nav_Walker(),
-                            'container'		=> '',
-                        ));
-                    }
-                    ?>
-                </li>
-            </ul>
-        </div>
-        <?php } ?>
+<div id="address">
 
-        <!-- Copy -->
-        <?php if (ale_get_option('copyrights')) : ?>
-            <p class="right"><?php echo ale_option('copyrights'); ?></p>
-        <?php else: ?>
-            <p class="right">&copy; <?php _e('2013 ALL RIGHTS RESERVED', 'aletheme')?></p>
-        <?php endif; ?>
+<img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/fill.png" width="9" height="13">
 
-    </nav>
-    <!-- Scripts -->
+<span id="street"><?php echo ale_get_option('your_address'); ?></span>   
+<br>
+<img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/phone.png" width="10" height="11"> 
+<span id="phone_number"><?php echo ale_get_option('phone_num'); ?></span>
+
+</div>
+
+<div id="social_links">
+
+<?php if(ale_get_option('rss')) { echo '<a href="'.ale_get_option('rss').'" target="_blank"><img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/rss.png" width="30" height="30"></a>'; } ?>
+
+<?php if(ale_get_option('fb')) { echo '<a href="'.ale_get_option('fb').'" target="_blank"><img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/facebook.png" width="30" height="30"></a>'; } ?>
+
+<?php if(ale_get_option('twi')) { echo '<a href="'.ale_get_option('twi').'" target="_blank"><img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/twitter.png" width="30" height="30"></a>'; } ?>
+
+<?php if(ale_get_option('pink')) { echo '<a href="'.ale_get_option('pink').'" target="_blank"><img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/pink.png" width="30" height="30"></a>'; } ?>
+
+<?php if(ale_get_option('pint')) { echo '<a href="'.ale_get_option('pint').'" target="_blank"><img src="http://webpaint/wp-content/themes/webpaint-theme/css/images/pinterest.png" width="30" height="30"></a>'; } ?>
+
+</div>
+
+<div class="row" id="rights">
+
+<?php if(ale_get_option('copyrights')) : ?>
+    <p><?php echo ale_option('copyrights'); ?></p>
+
+<?php else: ?>
+    <p>&copy; <?php echo "2016 Webpaint. All Rights Reserved." ?></p>
+<?php endif; ?>
+
     <?php wp_footer(); ?>
+
+</div>
+
 </body>
 </html>

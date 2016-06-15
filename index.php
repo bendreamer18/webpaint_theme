@@ -117,5 +117,5 @@
             <?php ale_part('archives'); ?>
         </div>
 
-    </div>
+    </div>   
 <?php get_footer(); ?>

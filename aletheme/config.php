@@ -110,46 +110,94 @@ function aletheme_get_options() {
 	$options[] = array( "name" => "Social",
 						"type" => "heading");
 
+      $options[] = array( "name" => "Footer Header",
+                        "desc" => "Type the header of the Footer.",
+                        "id" => "ale_footer_head",
+                        "std" => "Get in Touch",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Footer Text",
+                        "desc" => "Type the text you want to see in the Footer.",
+                        "id" => "ale_footer_text",
+                        "std" => "Vestibulum id ligula porta felis euismod semper,malesuada euismod.",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Address",
+                        "desc" => "Insert the address of your company.",
+                        "id" => "ale_your_address",
+                        "std" => "Moonshine Street No: 14/05 Light City, Jupiter",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Phone Number",
+                        "desc" => "Insert your Phone Number.",
+                        "id" => "ale_phone_num",
+                        "std" => "0247 541 65 87",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "RSS",
+                        "desc" => "Your RSS URL.",
+                        "id" => "ale_rss",
+                        "std" => "",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "Facebook",
+                        "desc" => "Your facebook profile URL.",
+                        "id" => "ale_fb",
+                        "std" => "",
+                        "type" => "text");
+
+
     $options[] = array( "name" => "Twitter",
                         "desc" => "Your twitter profile URL.",
                         "id" => "ale_twi",
                         "std" => "",
                         "type" => "text");
-	$options[] = array( "name" => "Facebook",
-						"desc" => "Your facebook profile URL.",
-						"id" => "ale_fb",
-						"std" => "",
-						"type" => "text");
-    $options[] = array( "name" => "Google+",
-                        "desc" => "Your google+ profile URL.",
-                        "id" => "ale_gog",
+
+
+    $options[] = array( "name" => "Pink",
+                        "desc" => "Your Pink profile URL.",
+                        "id" => "ale_pink",
                         "std" => "",
                         "type" => "text");
+
+
     $options[] = array( "name" => "Pinterest",
                         "desc" => "Your pinteres profile URL.",
                         "id" => "ale_pint",
                         "std" => "",
                         "type" => "text");
-    $options[] = array( "name" => "Flickr",
-                        "desc" => "Your flickr profile URL.",
-                        "id" => "ale_flickr",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Linkedin",
-                        "desc" => "Your linked profile URL.",
-                        "id" => "ale_linked",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Instagram",
-                        "desc" => "Your instagram profile URL.",
-                        "id" => "ale_insta",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Email",
-                        "desc" => "Your email",
-                        "id" => "ale_emailcont",
-                        "std" => "",
-                        "type" => "text");
+
+
+    // $options[] = array( "name" => "Google+",
+    //                     "desc" => "Your google+ profile URL.",
+    //                     "id" => "ale_gog",
+    //                     "std" => "",
+    //                     "type" => "text");
+
+
+    // $options[] = array( "name" => "Flickr",
+    //                     "desc" => "Your flickr profile URL.",
+    //                     "id" => "ale_flickr",
+    //                     "std" => "",
+    //                     "type" => "text");
+
+
+    // $options[] = array( "name" => "Linkedin",
+    //                     "desc" => "Your linked profile URL.",
+    //                     "id" => "ale_linked",
+    //                     "std" => "",
+    //                     "type" => "text");
+
+
+    // $options[] = array( "name" => "Instagram",
+    //                     "desc" => "Your instagram profile URL.",
+    //                     "id" => "ale_insta",
+    //                     "std" => "",
+    //                     "type" => "text");
+
+
     $options[] = array( "name" => "Show RSS",
                         "desc" => "Check if you want to show the RSS icon on your site",
                         "id" => "ale_rssicon",
@@ -170,85 +218,147 @@ function aletheme_get_options() {
 						"type" => "checkbox");
 
 
+
+    $options[] = array( "name" => "Icons",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "#1 Icon Header",
+                        "desc" => "Type the header of the first icon",
+                        "id" => "ale_icon_header_1",
+                        "std" => "Consectetur",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#2 Icon Header",
+                        "desc" => "Type the header of the second icon",
+                        "id" => "ale_icon_header_2",
+                        "std" => "Tristiquet",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#3 Icon Header",
+                        "desc" => "Type the header of the third icon",
+                        "id" => "ale_icon_header_3",
+                        "std" => "Fermentum",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#4 Icon Header",
+                        "desc" => "Type the header of the fourth icon",
+                        "id" => "ale_icon_header_4",
+                        "std" => "Elit Ultricies",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#1 Icon Description",
+                        "desc" => "Type the Description of the first icon",
+                        "id" => "ale_icon_desc_1",
+                        "std" => "Vestibulum id ligula porta euismod semper. Aenean lacinia bibendum nulla sed consectetur dui. ",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#2 Icon Description",
+                        "desc" => "Type the Description of the second icon",
+                        "id" => "ale_icon_desc_2",
+                        "std" => "Fusce dapibus, cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo risus. ",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#3 Icon Description",
+                        "desc" => "Type the Description of the third icon",
+                        "id" => "ale_icon_desc_3",
+                        "std" => "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum sagittis lacus mollis.",
+                        "type" => "text");
+
+
+    $options[] = array( "name" => "#4 Icon Description",
+                        "desc" => "Type the Description of the fourth icon",
+                        "id" => "ale_icon_desc_4",
+                        "std" => "Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet.",
+                        "type" => "text");
+
+
+
     $options[] = array( "name" => "Gallery",
                         "type" => "heading");
 
+    $options[] = array( "name" => "Featured Works Text",
+                        "desc" => "Type the text of Featured Works",
+                        "id" => "ale_feat_text",
+                        "std" => "Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. ",
+                        "type" => "text");
+
+
     $options[] = array( "name" => "Image #1",
-                        "desc" => "Upload or put the link of the image you want to see in the gallery",
+                        "desc" => "",
                         "id" => "ale_pic1",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/1.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #2",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic2",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/2.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #3",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic3",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/3.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #4",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic4",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/4.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #5",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic5",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/5.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #6",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic6",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/6.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #7",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic7",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/7.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #8",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic8",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/8.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #9",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic9",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/9.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #10",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic10",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/10.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #11",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic11",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/11.jpg",
                         "type" => "upload");
 
     $options[] = array( "name" => "Image #12",
                         "desc" => "Upload or put the link of the image you want to see in the gallery",
                         "id" => "ale_pic12",
-                        "std" => "",
-                        "type" => "upload");
-
-    $options[] = array( "name" => "Photo #1",
-                        "desc" => "Upload or put the link of the image you want to see in the gallery",
-                        "id" => "ale_pic1",
-                        "std" => "",
+                        "std" => "http://webpaint/wp-content/uploads/2016/06/12.jpg",
                         "type" => "upload");
 
 

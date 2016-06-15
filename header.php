@@ -108,11 +108,11 @@
     </nav>
 
         <!-- We are Block -->
-    <div class="row" id="weare_row">
+    <!-- <div class="row" id="weare_row">
         <div id="we-are-text">
             <p>We are <span id="webpaint"> <?php echo ale_get_option('company-name'); ?> </span></p>
             <span id="small_weare"> <?php echo ale_get_option('we-want'); ?> </span>
         </div>
 
         <div align="center"><button id="weare_button">See Portfolio</button></div>
-    </div>
+    </div> -->

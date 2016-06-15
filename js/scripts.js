@@ -16,6 +16,7 @@ jQuery(function($) {
 
 });
 
+
 Modernizr.addTest('ipad', function () {
     return !!navigator.userAgent.match(/iPad/i);
 });
@@ -387,3 +388,4 @@ jQuery(function($) {
     }
 });
 
+        
